@@ -1,0 +1,49 @@
+@media(max-width: 768px) { /*se a tela atingir X pixols*/
+    body {
+        background-position: center;
+        padding: 0 15px; /*esquerda e direita*/
+    }
+
+    .slider {
+        gap: 10px; /*dá espaço entre os elementos*/
+    }
+}
+
+@media(max-width: 496px) {
+    .lista-personagens {
+        width: 250px;
+    }
+
+    .imagem-carta {
+        width: 100%;
+    }
+
+    .slider {
+        position: relative;
+    }
+
+    .btn-seta { /*comnandos para a tela se ajustar ao telefone*/
+        position: absolute;
+        bottom: 1%; /*altura dos botões*/
+    }
+
+    #btn-avancar {
+        right: 20%;
+    }
+
+    #btn-voltar {
+        left: 20%;
+    }
+}
+
+@media(max-width: 375px) {
+    body {
+        justify-content: start;
+        padding-top: 10px;
+        gap: 10px;
+    }
+
+    .cabecalho {
+        font-size: 12px;
+    }
+}

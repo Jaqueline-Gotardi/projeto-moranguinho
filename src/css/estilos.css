@@ -1,0 +1,213 @@
+body{
+    font-family: 'Yugioh', serif;
+    background-image: url(../imagens/teladefundo1.jpg);
+    background-repeat: no-repeat; /* nao repete a img*/
+    background-size: cover; /* para cobrir todo o body */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh; /*altura da janela do navegador*/
+    gap: 30px; /*distancia entre os elementos*/
+}
+
+.cabecalho{
+    background-color: red; /*cor do cabeçalho*/
+    display: flex; /* forma de visualização do cabeçalho*/
+    justify-content: center; /* centraliza o texto do cabeçalho*/
+}
+
+.cabecalho .titulo{
+    color: white; /* cor do titulo*/
+}
+
+.cartao{
+    opacity: 0; /* Em 0 some todas as fotos, opacity é a nitidez*/
+    display: flex;
+    flex-direction: column; /* posiciona o texto dentro do cartao, um embaixo do outro*/
+    padding: 12px; /*separa a borda*/
+    gap: 5px;
+    position: absolute;
+
+}
+
+.cartao.selecionado{
+    opacity: 1; /* mostra somente a carta 1, que o cartao selecionado, ele foi nomeado assim*/
+    z-index: 1; /*mostra o primeiro cartao, comecando a mostrar do 1*/
+}
+
+.lista-personagens{
+    /*background-color: rgb(187, 4, 34); /*cor da lista*/
+    width: 300px; /*largura*/
+    height: 750px; /*altura*/
+    border-radius: 10px; /*borda do cartao*/
+    position: relative;
+    padding: 12px;
+}
+
+.slider{ /* slider significa deslizante, ou seja, as outras cartas estão em uma lista deslizante, nao e possivel vê-las ao mesmo tempo por conta da configuracao "opacity* em .cartao. Resumindo, slider representa o cartao em si */
+    display: flex; /* posiciona as setas ao lado da imagem, direita e esquerda*/
+    justify-content: center; /* centraliza a carta*/
+    align-items: center; /* centraliza os botoes*/
+    gap: 130px; /* da um espaço entre os elementos, nesse caso, os botoes*/
+}
+
+.cartao .nome{
+    font-size: 13px;/*fonte do titulo do cartao*/
+    padding: 5px; /* largura do espaço do titulo do cartao*/
+    text-transform: uppercase; /* tipo da fonte do titulo do texto do cartao*/
+    background: radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a); /*cor de fundo do titulo do cartao*/
+    border: 2px solid #a67c52; /*cor da borda do espaço do titulo*/
+    line-height: 1.5; /* altura do titulo da carta*/
+    border-radius: 4px; /*borda do espaço do titulo da carta*/
+}
+
+.cartao .estrela{
+    width: 20px;
+    height: 20px;
+    background-image: url(../imagens/nivel-carta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.cartao .nível-carta{
+    /*background-color: rgb(226, 127, 168);  /*cor do fundo de plano das estrelas*/
+    display: flex; /*ajusta as estrelas*/
+    justify-content: flex-end; /*posiciona as estrelas para a direita, no final do flex*/
+    margin-right: 0px;
+    gap: 5px; /*espaço entre as estrelas*/
+}
+
+.cartao .imagem-carta{
+    max-width: 275px; /*tamanho da foto da carta*/
+    align-self: center; /*alinha a imagem da carta no centro, por isso se chama "self"*/
+}
+
+.cartao .informacoes{
+    border-radius: 5px;
+    max-width: 300px; /*largura de plano de fundo da descrição da personagem*/
+    color: #000000;
+    background: radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a); /*cor de plano de fundo da descricao da personagem*/
+    border: 2px solid #a67c52; /*borda do plano de fundo da descricao da personagem*/
+    text-align: left;
+    line-height: 1.5; /*distãncia entre as letras da descrição da personagem*/
+    padding: 5px; /*largura*/
+}
+
+.cartao .informacoes .informacoes-ataque{
+    background-color: rgb(133, 32, 91);
+    display: flex;
+    justify-content: flex-end; /* a descricao final da carta vai para o canto da direita*/
+    gap: 5px; /*distancia entre as descricoes finais*/
+    padding: 10px; /*largura das informações finais da carta*/ 
+}
+
+.cartao .informacoes .informacoes-ataque 
+span{
+    font-size: 13px; /*tipo de letra*/
+}
+
+.cartao .informacoes .descricao{
+    border-bottom: 1px solid #000000; /*distancia e cor entre a descricao da personagem e a do final da carta*/
+    padding: 10px; /*largura da descricao da personagem*/
+    max-height: 95px; /*tamanho do plano de fundo da descrição debaixo da personagem*/
+    overflow-y: scroll; /*cria rolagem, ex: esse texto deverá ser rolado para baixo para visualizar o seu fim*/
+    font-size: 13px; /*tamanho da fonte*/
+}
+
+
+.fundo-1{
+    background: url(../imagens/tela2.jpeg) no-repeat;
+}
+
+.fundo-2{
+    background: url(../imagens/tela1.jpeg) no-repeat;
+}
+
+.fundo-3{
+    background: url(../imagens/tela5.jpeg) no-repeat;
+}
+
+.fundo-4{
+    background: url(../imagens/tela3.jpeg) no-repeat;
+}
+
+.fundo-5{
+    background: url(../imagens/tela7.jpeg) no-repeat;
+}
+
+.fundo-6{
+    background: url(../imagens/tela4.jpeg) no-repeat;
+}
+
+.fundo-7{
+    background: url(../imagens/tela6.jpeg) no-repeat;
+}
+
+.btn-seta{
+    background-color: #f5f2f2;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+}
+
+.btn-seta.btn-voltar{
+    transform: rotate(180deg); /*gira a seta em 180graus*/
+}
+
+.btn-seta:hover{
+    background-color: #4913d1;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #c08057;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c08057;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thum:hover {
+    background: #c08057;
+}
+
+.carta-virada {
+    display: none;
+}
+
+.carta-virada.mostrar-fundo-carta {
+    display: block; /*a carta volta a aparecer*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../imagens/fundo-carta.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.cartao.virar {
+    transform: rotateZ(90deg);
+    transition: transform 0.3s
+    ease-in-out;
+}
+
+.esconder {
+    display: none;
+    
+}
