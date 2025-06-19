@@ -1,6 +1,6 @@
 ## 💜 Olá, seja bem-vindo(a) ao projeto 🍓Moranguinho!
 
-![moranguinho](jogo.png)
+![moranguinho](tela.png)
 
 Este é um projeto de página temática inspirado na personagem Moranguinho, desenvolvido com foco em prática de estruturação HTML e estilização com CSS. O objetivo foi criar uma experiência visual delicada, infantil e harmoniosa, explorando conceitos fundamentais de desenvolvimento front-end como responsividade, organização em seções e identidade visual.
 
